@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by Valentin on 17.09.2017.
  */
-public class DriverFactory {
+class DriverFactory {
     public static WebDriver getDriver() {
         WebDriver driver = null;
         String driverName = System.getProperty("driver");
@@ -33,8 +33,8 @@ public class DriverFactory {
             driver = new FirefoxDriver();
         }
 
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+       // driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+       // driver.manage().window().maximize();
         driver.get(Constants.BASE_URL);
         return driver;
     }
