@@ -11,6 +11,6 @@ public class App {
     public CommonHelper common = new CommonHelper();
     public ComposeMailHelper compose = new ComposeMailHelper();
     public ReceivedEmailHelper receivedEmail = new ReceivedEmailHelper();
-    public SendStatusHelper sendStatus = new SendStatusHelper();
+
 
 }

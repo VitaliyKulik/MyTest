@@ -1,5 +1,6 @@
 package Tests;
 
+import org.apache.http.util.Asserts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,21 +14,23 @@ public class EmailTest extends BaseTest {
         Assert.assertTrue(true);
     }
 
-    @Test(priority=2)
+    @Test(priority = 2)
     public void testEmail() throws Exception {
         app.login.loginValidUser();
-       // app.login.login("qazwsx3@i.ua","qazwsx123");
+        // app.login.login("qazwsx3@i.ua","qazwsx123");
         String username = app.mail.getTextUserName();
         Assert.assertEquals(username, "test1", "Current username " + username + " is not correct");
 
         //li[@class='ho_menu_item']/a/span
         //*[@class='user_name']
     }
-   /* @Test(priority=1)
+
+    @Test(priority = 1)
     public void testEmail1() throws Exception {
+
         app.mail.newMessage();
-        app.compose.sendEmai("qazwsx3@i.ua", "test3", "testmessage3");
-        app.sendStatus.toMailPage();
+        app.compose.composeToMe();
+        app.mail.toInbox();
         String lastUserName = app.mail.getInboxLasUserName();
         Assert.assertEquals(lastUserName, "test1 test2", "Current username " + lastUserName + " is not correct");
         String lastSubj = app.mail.getInboxLasSubj();
@@ -39,5 +42,7 @@ public class EmailTest extends BaseTest {
         Assert.assertEquals(from, "qazwsx3@i.ua", "Current from " + from + " is not correct");
         String text = app.receivedEmail.getText();
         Assert.assertTrue(text.startsWith("testmessage3"), "Current subject " + text + " is not correct");
-    }*/
+
+
+    }
 }

@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by Valentin on 14.09.2017.
  */
@@ -22,7 +24,7 @@ public class ComposeMail extends BasePage {
 	@FindBy(xpath="(//input[@class='bold'])[1]")
 	private WebElement btnSend;
 
-	public void sendEmai(String recipient, String subject, String textMessage) {
+	protected void sendEmai(String recipient, String subject, String textMessage) {
 		toEmail.sendKeys(recipient);
 		subjEmail.sendKeys(subject);
 		textEmail.sendKeys(textMessage);
