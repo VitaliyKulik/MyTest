@@ -47,4 +47,6 @@ public class Email {
                 ", textMessage='" + textMessage + '\'' +
                 '}';
     }
+
+
 }

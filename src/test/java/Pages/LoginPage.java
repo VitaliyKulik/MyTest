@@ -22,7 +22,7 @@ public class LoginPage extends BasePage {
         inputPassword.sendKeys(password);
         btnLogin.click();
     }*/
-    protected void loginUser(String name, String password) {
+    public void login(String name, String password) {
         /*System.out.println(driver.getWindowHandle());
         System.out.println(driver.getWindowHandles());
         driver.manage().window().maximize();

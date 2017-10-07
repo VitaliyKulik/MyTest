@@ -11,17 +11,17 @@ import Utils.UserFactory;
 public class LoginHelper extends LoginPage {
 
     public void login(User user) {
-        loginUser(user.getName(), user.getPassword());
+        login(user.getName(), user.getPassword());
     }
 
     public void loginValidUser() {
         User user = UserFactory.getValidUser();
-        loginUser(user.getName(), user.getPassword());
+        login(user.getName(), user.getPassword());
     }
 
     public void loginInValidUser() {
         User user = UserFactory.getInValidUser();
-        loginUser(user.getName(), user.getPassword());
+        login(user.getName(), user.getPassword());
     }
 
 

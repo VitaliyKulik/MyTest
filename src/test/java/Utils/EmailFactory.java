@@ -13,7 +13,7 @@ public class EmailFactory {
     }
 
     public static Email getValidEmailToMe() {
-        return new Email(resource.getString("valid.login"), resource.getString("valid.subject"), resource.getString("valid.textMessage"));
+        return new Email(resource.getString("validMe.recipient"), resource.getString("valid.subject"), resource.getString("valid.textMessage"));
     }
 
 

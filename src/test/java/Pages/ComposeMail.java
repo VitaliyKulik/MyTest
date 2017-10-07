@@ -24,7 +24,7 @@ public class ComposeMail extends BasePage {
 	@FindBy(xpath="(//input[@class='bold'])[1]")
 	private WebElement btnSend;
 
-	protected void sendEmai(String recipient, String subject, String textMessage) {
+	public void composeEmail(String recipient, String subject, String textMessage) {
 		toEmail.sendKeys(recipient);
 		subjEmail.sendKeys(subject);
 		textEmail.sendKeys(textMessage);

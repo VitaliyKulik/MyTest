@@ -11,14 +11,6 @@ public abstract class BaseTest {
 
     App app = new App();
 
-
-  /*  LoginPage loginPage = new LoginPage();
-    MailPage mailPage = new MailPage();
-    ComposeMail composeMail = new ComposeMail();
-    ReceivedEmail receivedEmail = new ReceivedEmail();
-    MailPage newMessage = new MailPage();
-    SendStatus toInbox = new SendStatus();*/
-
     @BeforeSuite
     public void testSuite() throws Exception {
     }
